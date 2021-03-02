@@ -39,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'home.apps.HomeConfig',
     'registration.apps.RegistrationConfig',
+    'flux.apps.FluxConfig',
+    'subs.apps.SubsConfig',
+    'ticket.apps.TicketConfig',
+    'critic.apps.CriticConfig',
+    'comment.apps.CommentConfig',
+    'posts.apps.PostsConfig',
 ]
 
 MIDDLEWARE = [
