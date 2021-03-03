@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="..statics/css/style.css" />
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+	<div id="header">
+  	 	{% block header %}
+   		{% endblock %}
+    </div>
+    <div id="content">
+    	{% block content %}
+		{% endblock %}
+	</div>
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+
+{% extends "base.html" %}
+
+{% block title %}LITReview - Accueil{% endblock %}
+
+{% block head %}
+    {{ super() }}
+{% endblock %}
+
+{% block header %}
+	
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+	
+{% endblock %}

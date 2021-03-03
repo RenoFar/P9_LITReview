@@ -1,42 +1,21 @@
-<!DOCTYPE HTML>
-<html lang="en">
-	<head>
-  		<title>LITReview - Accueil</title>
-  		<meta http-equiv="Content-Type" content="text/html">
-  		<meta charset="UTF-8">
-  		<meta name="Author" content="***">
-  		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<header id="header">
-			<a href="" class="logo">
-				LITReview
-			</a>
-		</header>
-		<main>
-			<div class="row">
-				<div class="box">
-					<h3>Inscrivez-vous maintenant</h3>
-					<a href="#" class="button primary fit">S'inscrire</a>
-				</div>
-				<div class="box">
-					<h3>Connectez-vous</h3>
-					<form method="post" action="#">
-						<div class="inputform">
-							<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
-						</div>
-						<div class="inputform">
-							<input type="text" name="password" id="password" value="" placeholder="Mot de passe">
-						</div>
-					</form>
-						<a href="#" class="button primary fit">
-							Se connecter
-						</a>
-				</div>
-			</div>
-		</main>
-		<footer>
-			
-		</footer>
-	</body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}LITReview - Accueil{% endblock %}
+
+{% block head %}
+    {{ super }}
+{% endblock %}
+
+{% block header %}
+	<a href="">
+		<img class="logo" src="logo.png" alt="LITReview">
+	</a>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+	
+{% endblock %}
