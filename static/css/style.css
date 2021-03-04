@@ -227,9 +227,6 @@ hr {
 .align-right {
   text-align: right; }
 
-header {
-background: url("books-1204029_1920.jpg") no-repeat fixed center;
-}
 
 #header {
   display: -moz-flex;
@@ -238,7 +235,9 @@ background: url("books-1204029_1920.jpg") no-repeat fixed center;
   display: flex;
   border-bottom: solid 5px #7ab971;
   padding: 6em 0 1em 0;
-  position: relative; }
+  position: relative; 
+  background: url(../media/books-1204029_1920.jpg) no-repeat fixed center;
+}
 
    #header .logo {
     border-bottom: 0;

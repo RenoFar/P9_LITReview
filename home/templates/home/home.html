@@ -1,19 +1,39 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block title %}LITReview - Accueil{% endblock %}
 
 {% block head %}
-    {{ super }}
+    {{ block.super }}
 {% endblock %}
 
 {% block header %}
 	<a href="">
-		<img class="logo" src="logo.png" alt="LITReview">
+		<img class="logo" src="{% static 'media/logo.png' %}" alt="LITReview">
 	</a>
 {% endblock %}
 
 {% block content %}
-
+<div class="row">
+	<div class="box">
+		<h3>Inscrivez-vous maintenant</h3>
+		<a href="#" class="button primary fit">S'inscrire</a>
+	</div>
+	<div class="box">
+		<h3>Connectez-vous</h3>
+		<form method="post" action="#">
+			<div class="inputform">
+				<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
+			</div>
+			<div class="inputform">
+				<input type="text" name="password" id="password" value="" placeholder="Mot de passe">
+			</div>
+		</form>
+			<a href="#" class="button primary fit">
+				Se connecter
+			</a>
+	</div>
+</div>
 {% endblock %}
 
 {% block footer %}
