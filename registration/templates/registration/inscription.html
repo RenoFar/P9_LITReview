@@ -1,40 +1,39 @@
-<!DOCTYPE HTML>
-<html lang="en">
-	<head>
-  		<title>LITReview - Inscription</title>
-  		<meta http-equiv="Content-Type" content="text/html">
-  		<meta charset="UTF-8">
-  		<meta name="Author" content="***">
-  		<link rel="stylesheet" type="text/css" href="style.css">
-	</head>
-	<body>
-		<header id="header">
-			<a href="">
-				<img class="logo" src="logo.png" alt="LITReview">
-			</a>
-		</header>
-		<main>
-			<div class="row">
-				<div class="box">
-					<h3>Inscrivez-vous</h3>
-					<form method="post" action="#">
-						<div class="inputform">
-							<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
-						</div>
-						<div class="inputform">
-							<input type="password" name="password" id="password" value="" placeholder="Mot de passe">
-						</div>
-						<div class="inputform">
-							<input type="password" name="password" id="password" value="" placeholder="Confirmer mot de passe">
-						</div>
-					</form>
-						<a href="#" class="button">Retour</a>
-						<a href="#" class="button primary">S'inscrire</a>
+{% extends "registration/base.html" %}
+{% load static %}
+
+{% block title %}LITReview - Inscription{% endblock %}
+
+{% block head %}
+    {{ block.super }}
+{% endblock %}
+
+{% block header %}
+	<a href="{% url 'flux' %}">
+        <img class="logo" src="{% static 'media/logo.png' %}" alt="LITReview">
+    </a>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+		<div class="box">
+			<h3>Inscrivez-vous</h3>
+			<form method="post" action="#">
+				<div class="inputform">
+					<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
 				</div>
-			</div>
-		</main>
-		<footer>
-			
-		</footer>
-	</body>
-</html>
+				<div class="inputform">
+					<input type="password" name="password" id="password" value="" placeholder="Mot de passe">
+				</div>
+				<div class="inputform">
+					<input type="password" name="password" id="password" value="" placeholder="Confirmer mot de passe">
+				</div>
+			</form>
+				<a href="{% url 'index' %}" class="button">Retour</a>
+				<a href="#" class="button primary">S'inscrire</a>
+		</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	
+{% endblock %}

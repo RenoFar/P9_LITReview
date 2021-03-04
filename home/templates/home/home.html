@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "home/base.html" %}
 {% load static %}
 
 {% block title %}LITReview - Accueil{% endblock %}
@@ -8,7 +8,7 @@
 {% endblock %}
 
 {% block header %}
-	<a href="">
+	<a href="{% url 'flux' %}">
 		<img class="logo" src="{% static 'media/logo.png' %}" alt="LITReview">
 	</a>
 {% endblock %}
@@ -17,7 +17,7 @@
 <div class="row">
 	<div class="box">
 		<h3>Inscrivez-vous maintenant</h3>
-		<a href="#" class="button primary fit">S'inscrire</a>
+		<a href="{% url 'registration' %}" class="button primary fit">S'inscrire</a>
 	</div>
 	<div class="box">
 		<h3>Connectez-vous</h3>

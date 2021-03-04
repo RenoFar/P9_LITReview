@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+</head>
+<body>
+    <header id="header">
+        {% block header %}
+        {% endblock %}
+    </header>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    <div id="footer">
+        {% block footer %}
+        {% endblock %}
+    </div>
+</body>
+</html>
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}LITReview - Accueil{% endblock %}
+
+{% block head %}
+    {{ block.super }}
+{% endblock %}
+
+{% block header %}
+    <a href="{% url 'flux' %}">
+        <img class="logo" src="{% static 'media/logo.png' %}" alt="LITReview">
+    </a>
+{% endblock %}
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+    
+{% endblock %}
