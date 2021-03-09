@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}LITReview - posts{% endblock %}
+
+{% block head %}
+    {{ block.super }}
+{% endblock %}
+
+{% block header %}
+	<div class="col">
+	    <a href="{% url 'flux' %}">
+	        <img class="logo" src="{% static 'media/logo.png' %}" alt="LITReview">
+	    </a>
+		<nav class="menu"> 	
+	    	<a href="{% url 'flux' %}" class="button primary small">Flux</a>
+	        <a href="{% url 'posts' %}" class="button primary small">Posts</a>
+	        <a href="{% url 'subs' %}" class="button primary small">Abonnements</a>
+	        <a href="{% url 'index' %}" class="button primary small">Se déconnecter</a>
+		</nav>
+	</div>
+{% endblock %}
+
+{% block content %}
+<div class="view-flux box">
+	<div class="review-post box">
+		<h5>Vous avez publié une critique</h5>
+		<div class="datepost">23 février 2021</div>
+		<div class="resume-post"> 
+			véritablement révolutionnaire - &#9733; &#9733; &#9733; &#9733; &#9734;
+		</div>
+		<div class="detail-post box">
+			Une excelllente lecture et je vous recommande vivement !
+		</div>
+		<div class="review-post box">
+			<h5>Ticket - jean 8597</h5>
+			<div class="datepost">16 février 2021</div>
+			<div class="resume-post"> 
+				The origin of Spieces - Charles Darwin
+			</div>
+		</div>
+		<div class="row-align">
+			<a href="#" class="button">
+				Modifier
+			</a>
+			<a href="#" class="button primary">
+				Supprimer
+			</a>
+		</div>
+	</div>
+</div>
+<div class="review-post box">
+	<h5>Vous avez publié une critique</h5>
+	<div class="datepost">23 février 2021</div>
+	<div class="resume-post"> 
+		Exceptional - &#9733; &#9733; &#9733; &#9733; &#9733;
+	</div>
+	<div class="detail-post box">
+		-
+	</div>
+	<div class="review-post box">
+		<h5>Ticket - Vous</h5>
+		<div class="datepost">23 février 2021</div>
+		<div class="resume-post"> 
+			LA RELATIVITÉ - Albert Einstein
+		</div>
+	</div>
+	<div class="row-align">
+		<a href="#" class="button">
+			Modifier
+		</a>
+		<a href="#" class="button primary">
+			Supprimer
+		</a>
+	</div>
+</div>
+<div class="review-post box">
+	<h5>Vous avez publié un ticket</h5>
+	<div class="datepost">23 février 2021</div>
+	<div class="resume-post"> 
+		LA RELATIVITÉ - Albert Einstein
+	</div>
+</div>
+<div class="row-align">
+	<a href="#" class="button">
+		Modifier
+	</a>
+	<a href="#" class="button primary">
+		Supprimer
+	</a>
+</div>
+{% endblock %}
+
+{% block footer %}
+    
+{% endblock %}

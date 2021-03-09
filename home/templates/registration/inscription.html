@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}LITReview - Inscription{% endblock %}
+
+{% block head %}
+    {{ block.super }}
+{% endblock %}
+
+{% block header %}
+	<a href="{% url 'flux' %}">
+        <img class="logo" src="{% static 'media/logo.png' %}" alt="LITReview">
+    </a>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+		<div class="box">
+			<h3>Inscrivez-vous</h3>
+			<form method="post" action="#">
+				<div class="inputform">
+					<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
+				</div>
+				<div class="inputform">
+					<input type="password" name="password" id="password" value="" placeholder="Mot de passe">
+				</div>
+				<div class="inputform">
+					<input type="password" name="password" id="password" value="" placeholder="Confirmer mot de passe">
+				</div>
+			</form>
+				<a href="{% url 'index' %}" class="button">Retour</a>
+				<a href="#" class="button primary">S'inscrire</a>
+		</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	
+{% endblock %}
