@@ -15,6 +15,9 @@
 
 {% block content %}
 <div class="row">
+	{% for message in messages %}
+		<p id="message">{{messsage}}</p>
+	{% endfor %}
 	<div class="box">
 		<h3>Inscrivez-vous maintenant</h3>
 		<a href="{% url 'registration' %}" class="button primary fit">S'inscrire</a>
@@ -22,6 +25,7 @@
 	<div class="box">
 		<h3>Connectez-vous</h3>
 		<form method="post" action="#">
+			{% csrf_token %}
 			<div class="inputform">
 				<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
 			</div>

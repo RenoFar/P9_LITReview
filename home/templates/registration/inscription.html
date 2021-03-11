@@ -18,6 +18,34 @@
 		<div class="box">
 			<h3>Inscrivez-vous</h3>
 			<form method="post" action="#">
+				{% csrf_token %}
+				<div class="inputform" placeholder="Nom d'utilisateur">
+					{{form.username.label}}
+					{{form.username}}
+				</div>
+				<div class="inputform">
+					{{form.password1.label}}
+					{{form.password1}}
+				</div>
+				<div class="inputform">
+					{{form.password2.label}}
+					{{form.password2}}
+				</div>
+			
+				<a href="{% url 'index' %}" class="button">Retour</a>
+				<input type="submit" class="button primary" 
+				value="S'inscrire">
+			</form>
+		</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+	
+{% endblock %}
+
+			<form method="post" action="#">
+				{% csrf_token %}
 				<div class="inputform">
 					<input type="text" name="name" id="name" value="" placeholder="Nom d'utilisateur">
 				</div>
@@ -27,13 +55,8 @@
 				<div class="inputform">
 					<input type="password" name="password" id="password" value="" placeholder="Confirmer mot de passe">
 				</div>
-			</form>
+			
 				<a href="{% url 'index' %}" class="button">Retour</a>
-				<a href="#" class="button primary">S'inscrire</a>
-		</div>
-</div>
-{% endblock %}
-
-{% block footer %}
-	
-{% endblock %}
+				<input type="submit" class="button primary" 
+				value="S'inscrire">
+			</form>
